@@ -1,0 +1,81 @@
+@import './scss/bootstrap';
+@import './scss/screenLoader';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+
+
+
+.btn-category {
+  display: 'block';
+  outline: none;
+  border: none;
+  color: black;
+  position: absolute;
+  top: 250px;
+  left: 90px;
+  width: 100px;
+  z-index: 10;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.categoryDiv {
+  margin: 0 15px; // Adds 15px space on both sides
+  position: relative;
+  height: 345px;
+  width: 60%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    opacity: 10;
+
+
+    .img-category {
+      opacity: 10;
+    }
+
+    .btn-category {
+      opacity: 1;
+    }
+  }
+}
+
+.img-category {
+  // margin:5px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.categoryDiv {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  /* Ensures positioning for shadow */
+}
+
+.categoryDiv:hover {
+  transform: scale(1.05);
+  /* Scale up on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Add shadow */
+}
+
+.img-category {
+  max-width: 100%;
+  /* Ensure images are responsive */
+  border-radius: 8px;
+  /* Optional: add rounded corners */
+}
